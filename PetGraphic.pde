@@ -59,12 +59,12 @@ void drawPetGraphic() {
   // or swap it for an image (see Option B below).
 
   // Body
-  fill(170, 210, 255);
+  fill(170 + (myPet.getWeight()*2.5), 210 + (myPet.getWeight()*2), 255 - myPet.getWeight());
   noStroke();
-  ellipse(210, 220, 140, 120);
+  ellipse(210, 220, 140 + (myPet.getWeight()*2), 120 + (myPet.getWeight()*2));
 
   // Head
-  fill(170, 210, 255);
+  fill(170 + (myPet.getWeight()*2.5), 210 + (myPet.getWeight()*2), 255 - myPet.getWeight());
   ellipse(210, 145, 100, 90);
 
   // Eyes
@@ -85,10 +85,10 @@ void drawPetGraphic() {
   noFill();
   stroke(80);
   strokeWeight(2);
-  arc(210, 160, 24, 14, 0, PI);
+  arc(210, 160, 21 + (myPet.getWeight()*2) , 14 + (myPet.getHappinessLevel()*2), 0, PI);
 
   // Ears
-  fill(170, 210, 255);
+  fill(170 + (myPet.getWeight()*2.5), 210 + (myPet.getWeight()*2), 255 - myPet.getWeight());
   noStroke();
   triangle(178, 108, 168, 75, 195, 100);
   triangle(242, 108, 252, 75, 225, 100);
