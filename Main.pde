@@ -15,9 +15,9 @@ final int MESSAGE_DURATION = 2000; // milliseconds to show the message
 
 void setup() {
   size(600, 500);
-  textFont(createFont("Arial", 16, true));
+  textFont(createFont("Impact", 16, true));
 
-  myPet = new VirtualPet4("Coco");
+  myPet = new VirtualPet("Snoopy");
 
   // Buttons sit along the bottom of the screen
   // Button(label, x, y, width, height)
@@ -44,14 +44,14 @@ void draw() {
 
 void mousePressed() {
   if (feedButton.isClicked(mouseX, mouseY)) {
-    Food f = new Food("Watermelon", 3, 2, 2);
-    myPet.feed(f);
+    Food f = new Food("Tiramisu", 3, 2, 2);
+    myPet.feed();
     showMessage(f.getName() + " eaten!");
   }
 
   if (playButton.isClicked(mouseX, mouseY)) {
-    Game g = new Game("Coin Toss", 2, 1);
-    myPet.play(g);
+    Game g = new Game("Fitness Gram Pacer Test", 2, 1);
+    myPet.play();
     showMessage(g.getName() + " played!");
   }
 }
